@@ -70,14 +70,14 @@
             width:150px;
         }
 
-        .bg-dark{
-            background: #121212;
-            color:#fff;
-            width:300px; 
+        .bg-dark {
+            background: linear-gradient(0deg, #04521a, #00b835);
+            color: #fff;
+            width: 300px;
             height: 300px;
-            margin-top:2rem;
-            margin-left:2rem;
-            padding:10px; /* top, right, bottom, left */
+            margin-top: 2rem;
+            margin-left: 2rem;
+            padding: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -117,6 +117,17 @@
             font-size:1.5rem;
         }
 
+        .btn-success{
+            background: #00b835;
+            color:#fff;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.6s ease;
+            margin-left:2rem;
+        }
+
  
 
     </style>
@@ -127,7 +138,7 @@
 <body>
 
     <header class="box-header">
-        <nav>
+        <nav id="nav">
             <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
@@ -169,6 +180,27 @@
         <div class="box-inner">
             Jairo
         </div>
+
+        <button id="btn" class="btn-success">hide</button>
+        <button id="btn2" class="btn-success">Show</button>
+
+        <script>
+
+            const navMenu = document.querySelector('#nav');
+            const buttonClick = document.querySelector('#btn');
+            const buttonClick2 = document.querySelector('#btn2');
+
+            buttonClick.addEventListener('click', function(){
+                navMenu.style.display = 'none';
+            });
+
+            buttonClick2.addEventListener('click', function(){
+                navMenu.style.display = 'block';
+            });
+
+            
+
+        </script>
         
     </main>
 </body>
